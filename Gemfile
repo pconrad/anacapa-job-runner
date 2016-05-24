@@ -39,6 +39,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'rspec-sidekiq'
 end
 
 group :test do
