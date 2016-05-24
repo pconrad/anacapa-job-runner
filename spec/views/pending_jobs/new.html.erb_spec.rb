@@ -6,7 +6,6 @@ RSpec.describe "pending_jobs/new", type: :view do
       :course => "MyString",
       :assignment => "MyString",
       :username => "MyString",
-      :current_stage => "MyString"
     ))
   end
 
@@ -21,7 +20,6 @@ RSpec.describe "pending_jobs/new", type: :view do
 
       assert_select "input#pending_job_username[name=?]", "pending_job[username]"
 
-      assert_select "input#pending_job_current_stage[name=?]", "pending_job[current_stage]"
     end
   end
 end
