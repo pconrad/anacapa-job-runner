@@ -1,0 +1,29 @@
+<%= form_for(@pending_job) do |f| %>
+  <% if @pending_job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pending_job.errors.count, "error") %> prohibited this pending_job from being saved:</h2>
+
+      <ul>
+      <% @pending_job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :course %><br>
+    <%= f.text_field :course %>
+  </div>
+  <div class="field">
+    <%= f.label :assignment %><br>
+    <%= f.text_field :assignment %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @pending_job.course %>
+</p>
+
+<p>
+  <strong>Assignment:</strong>
+  <%= @pending_job.assignment %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @pending_job.username %>
+</p>
+
+<p>
+  <strong>Time queued:</strong>
+  <%= @pending_job.time_queued %>
+</p>
+
+<p>
+  <strong>Current stage:</strong>
+  <%= @pending_job.current_stage %>
+</p>
+
+<p>
+  <strong>Current stage started:</strong>
+  <%= @pending_job.current_stage_started %>
+</p>
+
+<%= link_to 'Edit', edit_pending_job_path(@pending_job) %> |
+<%= link_to 'Back', pending_jobs_path %>
