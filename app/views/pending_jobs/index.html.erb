@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Course</th>
       <th>Assignment</th>
       <th>Username</th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @pending_jobs.each do |pending_job| %>
       <tr>
+        <td><%= pending_job.id %></td>
         <td><%= pending_job.course %></td>
         <td><%= pending_job.assignment %></td>
         <td><%= pending_job.username %></td>

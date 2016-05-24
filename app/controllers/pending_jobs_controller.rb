@@ -32,6 +32,7 @@ class PendingJobsController < ApplicationController
 
     respond_to do |format|
       if @pending_job.save
+        EFinishJob.perform_in(1.minutes, @pending_job.id, @pending_job.course, @pending_job.assignment, @pending_job.username)
         format.html { redirect_to @pending_job, notice: 'Pending job was successfully created.' }
         format.json { render :show, status: :created, location: @pending_job }
       else
